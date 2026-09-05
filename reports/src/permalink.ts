@@ -63,7 +63,7 @@ export function updatePermalink()
 	const hideOptionsButton = document.getElementById("hideOptions") as HTMLInputElement;
 	const latestMonthButton = document.getElementById("latestMonth") as HTMLInputElement;
 	
-	var permalink = "https://pmmg-products.github.io/reports/?type=" + graphSelect.value;
+	var permalink = "https://kamalgar-projects.github.io/pmmg-products.github.io/reports/?type=" + graphSelect.value;
 	var rprunLink = "XIT PRUNSTATS type-" + graphSelect.value;
 	
     const graph = graphs.find(obj => obj.id == graphSelect.value);
