@@ -119,6 +119,29 @@
 - For profit EXACTNESS (not backfill): model overshoots real margins ~20-165% => Samuel's
   profit = price - inputs - more terms (wages? depreciation?). Remaining open item.
 
+## RAYLU THREAD (2026-09-07): reply received, formulas PUSHED
+- DM channel 1545926220300943380 (DM, type 1): 3 messages. Rémi's outreach (sep 5) →
+  **raylu replied sep 6 02:30: "I see [fork commits] but where are the consumed/profit
+  formulas?"** — he looked and found only data files (pipeline code was never pushed).
+- **RESPONSE: pipeline/ published to the fork** (commit bd9dc1b, verified via
+  raw.githubusercontent 200): pipeline.py, backfill_26.py, validate_all.py, census
+  scripts, NOTE.md, fio_recipes.json + pipeline/README.md with the formulas in tables.
+- raylu's site `prun.raylu.net/stats/` verified: same app/schema as Samuel's (identical
+  data/ paths), 17 months (apr25→jul26). **profit=None since may26** (never had the
+  model — confirms his "most guesstimated number" line). prod-data format is SIMPLIFIED:
+  `{ticker: {amount, volume}}` universe totals only (no per-company, no rank/profit).
+- jul26 cross-check: his site bases=19,594 vs our tail model ~19,136 — two independent
+  estimators within ~2.4%. His aug26 is STAGED, not integrated: base/ship/prod-data-aug26
+  .json exist (prod-data: 363 companies, amount+volume) but universe-data.json still ends
+  at jul26 (no aug26 key, no profit anywhere since may26); aug26.csv still BASES(2,522
+  rows — deepest board ever)+SHIPS only, NO PRODUCTION sections; his aug26-prices.json =
+  CXOB 2026-09-01T16:27Z (2,214 entries). Local: cache/raylu/.
+- Our aug26 report: universe-level amounts computable from his prod-data (his own price
+  model) — but per-company detail awaits his PRODUCTION boards. Reply draft (Rémi
+  reviews & sends): ~/pmmg/revival/raylu-REPLY-DRAFT.md — includes the LEAD-capture
+  question (client stopped sending LEADERBOARD_SCORES over WS — his method unknown,
+  gogs has no README).
+
 ## Known open items
 0. raylu outreach draft ready: ~/pmmg/revival/raylu-outreach-DRAFT.md (long+short versions;
    offers = profit/consumed model + 14mo price/margin tables + universe.bases census +
